@@ -1,0 +1,26 @@
+QPushButton {
+    background-color: #ad00fc;
+    color: #f4f5b0;
+    font-weight: bold;
+}
+
+/*QTableView {
+    background-color: black;
+}*/
+
+QWidget {
+    background-color: #d1416c;
+    color: #f4f5b0; /* текст */
+}
+
+QLabel {
+    color: black;
+    font-weight: bold;
+    font-size: 18px;  
+}
+
+/*QMessageBox
+{
+    background-color: #e4aefc; 
+    color: black; 
+}
