@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1048</width>
+    <height>699</height>
+   </rect>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::NoContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Работа кинотеатра</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources/resources.qrc">
+    <normaloff>:/style/rc/arrow_down_disabled@2x.png</normaloff>:/style/rc/arrow_down_disabled@2x.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">&lt;widget class=&quot;QWidget&quot; name=&quot;yourWidgetName&quot;&gt;
+    &lt;property name=&quot;geometry&quot;&gt;
+        &lt;rect&gt;
+            &lt;!-- Установите размеры и координаты виджета --&gt;
+        &lt;/rect&gt;
+    &lt;/property&gt;
+    &lt;property name=&quot;styleSheet&quot;&gt;
+        &lt;string notr=&quot;true&quot;&gt;
+            C:\Users\tetyakoff\Desktop\chip\sibsutis-master\5 семестр\VirtualProgramming\сourseWork\CourseWork\resources\images
+            background-image: url(:/path/to/your/image.png);
+        &lt;/string&gt;
+    &lt;/property&gt;
+&lt;/widget&gt;</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QTableView" name="tableView"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="styleSheet">
+         <string notr="true">font: 9pt;</string>
+        </property>
+        <property name="text">
+         <string>База данных пуста
+ или отсутствует! </string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QPushButton" name="addButton">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Добавить</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="delButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Удалить</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="editButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Редактировать</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="ticketsButton">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Забронировать</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1048</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Сочетания клавиш</string>
+    </property>
+    <addaction name="menu1_add_record"/>
+    <addaction name="menu1_edit_record"/>
+    <addaction name="menu1_del_record"/>
+    <addaction name="separator"/>
+    <addaction name="menu1_exit"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Помощь</string>
+    </property>
+    <addaction name="menu2_help"/>
+    <addaction name="menu2_about"/>
+   </widget>
+   <addaction name="menu_2"/>
+   <addaction name="menu"/>
+  </widget>
+  <action name="menu1_add_record">
+   <property name="text">
+    <string>Добавить запись</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="menu1_edit_record">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Редактировать запись</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="menu1_del_record">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Удалить запись</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="menu1_exit">
+   <property name="text">
+    <string>Выход</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="menu2_help">
+   <property name="text">
+    <string>Помощь</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="menu2_about">
+   <property name="text">
+    <string>Информация о создателе</string>
+   </property>
+   <property name="shortcut">
+    <string>F2</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resources/resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
